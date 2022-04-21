@@ -2,19 +2,20 @@ function switchOfStuff(val) {
     let answer = '';
     switch (val){
       case 'a':
-        return 'apple';
+        answer ='apple';
         break;
       case 'b':
-        return 'bird';
+        answer ='bird';
         break;
       case 'c':
-        return 'cat';
+        answer ='cat';
         break;
       default:
-        return "stuff";
+        answer ="stuff";
         break;
     }
-    return answer;
+    console.log(answer);
   }
   
   switchOfStuff('a');
+  switchOfStuff(5);
