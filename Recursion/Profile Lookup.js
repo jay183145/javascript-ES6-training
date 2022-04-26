@@ -33,10 +33,11 @@ const contacts = [
             } else {
                 return "No such property";
             }
+            // if return here function will only iter once
         }
     }
     return "No such contact";
   }
 
- console.log(lookUpProfile("Akira", "likes"));
- console.log(contacts.length);
+//  console.log(lookUpProfile("Akira", "likes"));
+ console.log(lookUpProfile("Sherlock", "likes"));
