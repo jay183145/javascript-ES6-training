@@ -19,18 +19,17 @@ const recordCollection = {
     }
   };
   
-  // Only change code below this line
-  function updateRecords(records, id, prop, value) {
-      if (prop !== "tracks" && value !== "") {
-          recordCollection[id][prop] = value ;
-      } else if (prop === "tracks" && recordCollection[id].hasOwnProperty("tracks") === false) {
-        //   You can’t push to an array that doesn’t exist. Use hasOwnProperty to check first. 
-          recordCollection[id][prop] = [value];
-      } else if (prop === "tracks" && value !== "") {    
-          recordCollection[id][prop].push(value);
-      } else if (prop === "tracks" && value === "" ) {
-          delete records[id][prop];
-      }
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+    if (prop !== 'tracks' && value !== "") {
+      records[id][prop] = value;
+    } else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+      records[id][prop] = [value];
+    } else if (prop === "tracks" && value !== "") {
+      records[id][prop].push(value);
+    } else if (value === "") {
+      delete records[id][prop];
+    }
     return records;
   }
 
