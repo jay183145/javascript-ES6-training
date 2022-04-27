@@ -1,11 +1,6 @@
-let answer = []
+
 function filter_list(l) {
-  for (let i = 0; i < l.length ; i++) {
-    if (typeof l[i] === "number") {
-      answer.push(l[i]);
-    }
-  }
-  return answer;
+    return l.filter((el) => typeof(el) === "number");
   // Return a new array with the strings filtered out
 }
 
